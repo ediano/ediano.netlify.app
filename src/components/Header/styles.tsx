@@ -14,14 +14,12 @@ export const Nav = styled.nav`
 
 export const NavContainer = styled.div`
   display: flex;
+  width: 1200px;
+  max-width: 85%;
   height: 100%;
+  margin-right: auto;
+  margin-left: auto;
   justify-content: space-between;
-
-  @media (min-width: 993px) {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
 `;
 
 export const Logo = styled.div`

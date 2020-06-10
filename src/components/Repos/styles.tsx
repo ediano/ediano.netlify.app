@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  display: block;
-  width: 90%;
-  margin: 50px auto;
-`;
-
-export const SectionContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -30,6 +24,10 @@ export const Content = styled.div`
 export const ContentTitle = styled.h1`
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding: 20px;
+`;
+
+export const ContentTitleLink = styled.a`
+  color: #fff;
 `;
 
 export const ContentDescription = styled.div`
@@ -56,7 +54,7 @@ export const Link = styled.a`
   border-radius: 4px;
   background: #36a9e1;
   display: block;
-  margin: 5px 0;
+  margin: 5px;
 
   &:hover {
     background: #1e739c;
@@ -70,7 +68,7 @@ export const License = styled.span`
   background: #ef5466;
   cursor: default;
   display: block;
-  margin: 5px 0;
+  margin: 5px;
 
   &:hover {
     background: #ca2a36;

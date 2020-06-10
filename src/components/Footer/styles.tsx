@@ -6,7 +6,8 @@ export const Footer = styled.footer`
 `;
 
 export const FooterContainer = styled.div`
-  width: 90%;
+  width: 1200px;
+  max-width: 85%;
   margin: 0 auto;
   text-align: center;
 `;

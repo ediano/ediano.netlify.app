@@ -12,6 +12,7 @@ interface Repos {
   name: string;
   description: string;
   html_url: string;
+  homepage: string;
   license?: License;
 }
 
@@ -26,20 +27,28 @@ const Repos = () => {
 
   return (
     <S.Section>
-      <S.SectionContainer>
-        {repos.map((item) => (
-          <S.Content key={item.id}>
-            <S.ContentTitle>{item.name}</S.ContentTitle>
+      {repos.map((item) => (
+        <S.Content key={item.id}>
+          <S.ContentTitle>
+            {item.homepage !== null ? (
+              <S.ContentTitleLink href={item.homepage} target="black">
+                {item.name}
+              </S.ContentTitleLink>
+            ) : (
+              item.name
+            )}
+          </S.ContentTitle>
 
-            <S.ContentDescription>{item.description}</S.ContentDescription>
+          <S.ContentDescription>{item.description}</S.ContentDescription>
 
-            <S.ContentLinkLicense>
-              <S.Link href={item.html_url}>Acessar repositório</S.Link>
-              <S.License>{item.license ? item.license.name : "Not"}</S.License>
-            </S.ContentLinkLicense>
-          </S.Content>
-        ))}
-      </S.SectionContainer>
+          <S.ContentLinkLicense>
+            <S.Link href={item.html_url} target="black">
+              Acessar repositório
+            </S.Link>
+            <S.License>{item.license ? item.license.name : "Not"}</S.License>
+          </S.ContentLinkLicense>
+        </S.Content>
+      ))}
     </S.Section>
   );
 };
