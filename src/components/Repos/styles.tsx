@@ -23,6 +23,8 @@ export const SectionContainer = styled.section`
 export const Content = styled.div`
   background: #23232d;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ContentTitle = styled.h1`
@@ -34,10 +36,12 @@ export const ContentDescription = styled.div`
   padding: 20px;
 `;
 
-export const ContentLink = styled.div`
+export const ContentLinkLicense = styled.div`
   padding: 20px;
   display: flex;
+  flex: 1;
   justify-content: space-between;
+  align-items: flex-end;
 
   @media (max-width: 420px) {
     display: block;
