@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ediano:
+    image: node:lts-alpine
+    container_name: ediano
+    tty: true
+    working_dir: /app
+    volumes:
+      - './:/app'
+    ports:
+      - '3000:3000'
+    command: sh -c "apk add bash git && sh -a"
