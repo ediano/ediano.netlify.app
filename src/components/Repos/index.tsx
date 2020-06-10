@@ -29,15 +29,7 @@ const Repos = () => {
     <S.Section>
       {repos.map((item) => (
         <S.Content key={item.id}>
-          <S.ContentTitle>
-            {item.homepage !== null ? (
-              <S.ContentTitleLink href={item.homepage} target="black">
-                {item.name}
-              </S.ContentTitleLink>
-            ) : (
-              item.name
-            )}
-          </S.ContentTitle>
+          <S.ContentTitle>{item.name}</S.ContentTitle>
 
           <S.ContentDescription>{item.description}</S.ContentDescription>
 
@@ -45,6 +37,7 @@ const Repos = () => {
             <S.Link href={item.html_url} target="black">
               Acessar repositório
             </S.Link>
+
             <S.License>{item.license ? item.license.name : "Not"}</S.License>
           </S.ContentLinkLicense>
         </S.Content>

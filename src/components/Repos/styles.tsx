@@ -26,10 +26,6 @@ export const ContentTitle = styled.h1`
   padding: 20px;
 `;
 
-export const ContentTitleLink = styled.a`
-  color: #fff;
-`;
-
 export const ContentDescription = styled.div`
   padding: 20px;
 `;
