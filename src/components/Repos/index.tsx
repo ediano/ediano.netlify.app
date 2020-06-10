@@ -33,10 +33,10 @@ const Repos = () => {
 
             <S.ContentDescription>{item.description}</S.ContentDescription>
 
-            <S.ContentLink>
+            <S.ContentLinkLicense>
               <S.Link href={item.html_url}>Acessar repositório</S.Link>
               <S.License>{item.license ? item.license.name : "Not"}</S.License>
-            </S.ContentLink>
+            </S.ContentLinkLicense>
           </S.Content>
         ))}
       </S.SectionContainer>
