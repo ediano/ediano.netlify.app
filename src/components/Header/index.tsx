@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
-import ReactDOM from 'react-dom';
+import React, { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 
 import { social } from "../../config/site";
@@ -17,26 +16,25 @@ interface Profile {
 
 const Header: React.FC = () => {
   const [size, setSize] = useState(0);
-  const [navContainer, setNavContainer] = useState(null);
+  const [navContainer, setNavContainer] = useState(false);
+  const [startMenuUl, setStartMenuUl] = useState("");
   const [github, setGithub] = useState<Profile>();
-  const navContainerRef = useRef(null);
-  const [button, setButton] = useState<HTMLElement>({} as HTMLElement);
- 
-  useEffect(() => {
-    const widthSize = window.innerWidth;
-    setSize(Number(widthSize));
-    setNavContainer(navContainerRef.current);
 
-    function handleButton() {    
+  window.addEventListener("resize", () => {
+    setSize(window.innerWidth);
+  });
+
+  useEffect(() => {
+    function handleWidth() {
       if (size !== 0 && size < 700) {
-        const btn = React.createElement('S.Button', null, <FiMenu />);
-        setButton(btn);
+        setNavContainer(true);
       } else if (size > 700) {
-        console.log('Maior');
+        setNavContainer(false);
+        setStartMenuUl("");
       }
     }
 
-    handleButton();
+    handleWidth();
   }, [size]);
 
   useEffect(() => {
@@ -45,11 +43,19 @@ const Header: React.FC = () => {
     });
   }, []);
 
+  function handlaButton() {
+    if (startMenuUl === "open") {
+      setStartMenuUl("");
+    } else {
+      setStartMenuUl("open");
+    }
+  }
+
   return (
     <S.Header>
       <S.Nav>
-        <S.NavContainer ref={navContainerRef}>
-          <S.Ul>
+        <S.NavContainer>
+          <S.Ul className={startMenuUl}>
             {social.map((item) => (
               <S.Li key={item.title}>
                 <S.LiLink
@@ -69,7 +75,13 @@ const Header: React.FC = () => {
             </S.LogoLink>
           </S.Logo>
 
-          {button ? button : ''}
+          {navContainer ? (
+            <S.Button onClick={handlaButton}>
+              <FiMenu size={30} />
+            </S.Button>
+          ) : (
+            ""
+          )}
         </S.NavContainer>
       </S.Nav>
     </S.Header>

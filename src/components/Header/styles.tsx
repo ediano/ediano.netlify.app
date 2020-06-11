@@ -53,6 +53,28 @@ export const Ul = styled.ul`
 
   @media (max-width: 700px) {
     display: none;
+
+    ${(props) =>
+      props.className
+        ? `
+      position: fixed;
+      display: flex;
+      width: 200px;
+      height: 100%;
+      z-index: 5;
+      background: #191919;
+      left: 0;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+        `
+        : ""}
+  }
+
+  &:open {
+    display: block !important;
   }
 `;
 
@@ -68,8 +90,10 @@ export const LiLink = styled.a`
   display: flex;
   align-items: center;
 
-  &:hover {
-    background: #000
+  @media (min-width: 700px) {
+    &:hover {
+      background: #000;
+    }
   }
 `;
 
