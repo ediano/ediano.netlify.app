@@ -72,3 +72,10 @@ export const LiLink = styled.a`
     background: #000
   }
 `;
+
+export const Button = styled.button`
+  cursor: pointer;
+  padding: 0 15px;
+  background: transparent;
+  color: #fff;
+`;
