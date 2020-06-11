@@ -1,7 +1,7 @@
 import React from "react";
 
-import Layout from "../components/Layout";
-import Repos from "../components/Repos";
+import Layout from "../../components/Layout";
+import Repos from "../../components/Repos";
 
 import * as S from "./styles";
 
