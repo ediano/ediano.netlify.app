@@ -27,7 +27,7 @@ export const Logo = styled.div`
   display: flex;
   height: 100%;
 
-  @media (max-width: 700px) {
+  @media (max-width: 701px) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -51,7 +51,7 @@ export const Ul = styled.ul`
   padding: 0 15px;
   height: 100%;
 
-  @media (max-width: 700px) {
+  @media (max-width: 701px) {
     display: none;
 
     ${(props) =>
@@ -93,6 +93,13 @@ export const LiLink = styled.a`
   @media (min-width: 700px) {
     &:hover {
       background: #000;
+    }
+  }
+
+  @media (max-width: 701px) {
+    svg {
+      width: 50px;
+      height: 50px;
     }
   }
 `;

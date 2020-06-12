@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     box-sizing: border-box;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   html,
