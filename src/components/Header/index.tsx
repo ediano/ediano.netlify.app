@@ -25,7 +25,9 @@ const Header: React.FC = () => {
   });
 
   useEffect(() => {
-    size === 0 ? setSize(window.innerWidth) : null;
+    if (size === 0) {
+      setSize(window.innerWidth);
+    }
 
     function handleWidth() {
       if (size !== 0 && size < 700) {
