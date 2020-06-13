@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
@@ -27,7 +27,7 @@ export const Logo = styled.div`
   display: flex;
   height: 100%;
 
-  @media (max-width: 701px) {
+  @media (max-width: 700px) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -47,30 +47,34 @@ export const LogoImg = styled.img`
 `;
 
 export const Ul = styled.ul`
-  display: flex;
   padding: 0 15px;
   height: 100%;
 
-  @media (max-width: 701px) {
-    display: none;
+  @media (min-width: 701px) {
+    display: flex;
+  }
+
+  @media (max-width: 700px) {
+    position: fixed;
+    display: flex;
+    transform: translateX(-150%);
+    transition: 0.5s;
+    width: 200px;
+    height: 100%;
+    background: #191919;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+    left: 0;
 
     ${(props) =>
-      props.className
-        ? `
-      position: fixed;
-      display: flex;
-      width: 200px;
-      height: 100%;
-      z-index: 5;
-      background: #191919;
-      left: 0;
-      padding: 20px;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
-        `
-        : ""}
+      props.className &&
+      css`
+        transform: translateX(0%);
+      `}
   }
 
   &:open {
@@ -90,13 +94,13 @@ export const LiLink = styled.a`
   display: flex;
   align-items: center;
 
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     &:hover {
       background: #000;
     }
   }
 
-  @media (max-width: 701px) {
+  @media (max-width: 700px) {
     svg {
       width: 50px;
       height: 50px;
