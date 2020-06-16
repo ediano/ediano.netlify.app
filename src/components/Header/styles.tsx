@@ -57,7 +57,7 @@ export const Ul = styled.ul`
   @media (max-width: 700px) {
     position: fixed;
     display: flex;
-    transform: translateX(-150%);
+    transform: translateX(-105%);
     transition: 0.5s;
     width: 200px;
     height: 100%;
