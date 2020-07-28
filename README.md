@@ -1,4 +1,3 @@
-# Ediano
-Um pequeno blog pessoal para testar o comsumo de API do GitHub.
+# Ediano Silva Santos
 
-Consumindo api do GitHub para listar repositórios do perfil pessoal com ReactJS, TypeScript, Axios e Styled Components.
+Estudante de sistemas de informação. Apaixonado por tecnologia, aprendendo sobre de desenvolvimento front-end e back-end.
