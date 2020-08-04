@@ -12,8 +12,8 @@ Estou me aprofundando um pouco mais nas seguintes tecnologias NodeJS, ExpressJS,
 
 # Contato
 
-![Gmail Badge](https://img.shields.io/badge/Gmail-ess.ediano%40gmail.com-red)](mailto:ess.ediano@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/Gmail-ess.ediano%40gmail.com-red)](mailto:ess.ediano@gmail.com)
 
-![LinkedIn](https://img.shields.io/badge/LinkedIn-https%3A%2F%2Fwww.linkedin.com%2Fin%2Fediano-blue)](https://www.linkedin.com/in/ediano)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-https%3A%2F%2Fwww.linkedin.com%2Fin%2Fediano-blue)](https://www.linkedin.com/in/ediano)
 
-![Blog](https://img.shields.io/badge/Blog-https%3A%2F%2Finsideblock.com-blue)](https://insideblock.com)
+[![Blog](https://img.shields.io/badge/Blog-https%3A%2F%2Finsideblock.com-blue)](https://insideblock.com)
