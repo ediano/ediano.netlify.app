@@ -39,19 +39,19 @@ export const social: ConfigSocial[] = [
   {
     title: "Twitter",
     url: "https://twitter.com",
-    userName: "edianoss",
+    userName: "edianodev",
     ico: <FiTwitter size={sizeIco} />,
   },
   {
     title: "Facebook",
     url: "https://www.facebook.com",
-    userName: "edianoss",
+    userName: "edianodev",
     ico: <FiFacebook size={sizeIco} />,
   },
   {
     title: "LinkedIn",
     url: "https://www.linkedin.com/in",
-    userName: "ediano",
+    userName: "edianodev",
     ico: <FiLinkedin size={sizeIco} />,
   },
 ];
