@@ -18,5 +18,5 @@ Sou apaixonado por tecnologia, curto muito series e filmes de ficção, sou fasc
 [![Contact by email](https://img.shields.io/badge/email-edianodev@gmail.com-red)](mailto:edianodev@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-linkedin.com/in/edianodev-blue)](https://www.linkedin.com/in/edianodev)
 
 ### Blog
-[![Blog](https://img.shields.io/badge/Blog-ediano-black)](https://ediano.vercel.app/){:target="_blank", :rel="nofollow noopener noreferrer"}
-[![Blog](https://img.shields.io/badge/Blog-insideblock.com-blue)](https://insideblock.com){:target="_blank" :rel="nofollow noopener noreferrer"}
+[![Blog](https://img.shields.io/badge/Blog-ediano-black)](https://ediano.vercel.app/)
+[![Blog](https://img.shields.io/badge/Blog-insideblock.com-blue)](https://insideblock.com)
