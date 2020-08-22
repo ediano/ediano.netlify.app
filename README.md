@@ -15,4 +15,7 @@ Sou apaixonado por tecnologia, curto muito series e filmes de ficção, sou fasc
 :blue_book: Além da faculdade também estou estudando na horas vagas tudo que posso sobre desenvolvimento Back-end e Front-end. NodeJS, ExpressJS, ReactJS e TypeScript.
 
 ### Contato
-[![Contact by email](https://img.shields.io/badge/email-edianodev@gmail.com-red)](mailto:edianodev@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-linkedin.com/in/edianodev-blue)](https://www.linkedin.com/in/edianodev) [![Blog](https://img.shields.io/badge/Blog-insideblock.com-blue)](https://insideblock.com)
+[![Contact by email](https://img.shields.io/badge/email-edianodev@gmail.com-red)](mailto:edianodev@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-linkedin.com/in/edianodev-blue)](https://www.linkedin.com/in/edianodev)
+
+### Blog
+[![Blog](https://img.shields.io/badge/Blog-insideblock.com-blue)](https://insideblock.com)
