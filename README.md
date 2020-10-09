@@ -1,6 +1,8 @@
 # Ediano Silva Santos
 
-## Olá…
+[![Twitter Badge](https://img.shields.io/badge/-@edianobr-27a9e1?style=flat-square&labelColor=27a9e1&logo=twitter&logoColor=white&link=https://twitter.com/edianobr)](https://twitter.com/edianobr) 
+[![Linkedin Badge](https://img.shields.io/badge/-Ediano%20Silva%20Santos-27a9e1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ediano)](https://www.linkedin.com/in/ediano) 
+[![Gmail Badge](https://img.shields.io/badge/-edianodev@gmail.com-27a9e1?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edianodev@gmail.com)](mailto:edianodev@gmail.com)
 
 Atualmente faço bacharelado em sistemas de informação (5º período).
 
@@ -13,13 +15,6 @@ Sou apaixonado por tecnologia, curto muito series e filmes de ficção, sou fasc
 :blush: Posso te ajudar com CSS Grid Layout, Flexbox e JavaScript.
 
 :blue_book: Além da faculdade também estou estudando na horas vagas tudo que posso sobre desenvolvimento Back-end e Front-end. NodeJS, ExpressJS, ReactJS e TypeScript.
-
-### Contato
-[![Twitter Badge](https://img.shields.io/badge/-@edianobr-27a9e1?style=flat-square&labelColor=27a9e1&logo=twitter&logoColor=white&link=https://twitter.com/edianobr)](https://twitter.com/edianobr)
-
-[![Linkedin Badge](https://img.shields.io/badge/-Ediano%20Silva%20Santos-27a9e1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ediano)](https://www.linkedin.com/in/ediano)
-
-[![Gmail Badge](https://img.shields.io/badge/-edianodev@gmail.com-27a9e1?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edianodev@gmail.com)](mailto:edianodev@gmail.com)
 
 ### Blog
 [![Blog](https://img.shields.io/badge/Blog-ediano-black)](https://ediano.vercel.app/)
