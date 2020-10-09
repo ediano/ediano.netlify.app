@@ -15,7 +15,3 @@ Sou apaixonado por tecnologia, curto muito series e filmes de ficção, sou fasc
 :blush: Posso te ajudar com CSS Grid Layout, Flexbox e JavaScript.
 
 :blue_book: Além da faculdade também estou estudando na horas vagas tudo que posso sobre desenvolvimento Back-end e Front-end. NodeJS, ExpressJS, ReactJS e TypeScript.
-
-### Blog
-[![Blog](https://img.shields.io/badge/Blog-ediano-black)](https://ediano.vercel.app/)
-[![Blog](https://img.shields.io/badge/Blog-insideblock.com-blue)](https://insideblock.com)
