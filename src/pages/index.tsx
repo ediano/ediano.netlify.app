@@ -1,6 +1,7 @@
 import React from 'react'
-import Head from 'next/head'
 import { GetStaticProps } from 'next'
+import Link from 'next/link'
+import Head from 'next/head'
 import { api } from '../services/api'
 
 import Header from '../components/Header'
@@ -43,13 +44,19 @@ const Home: React.FC<Props> = ({ repos }) => {
       <Main>
         {repos.map(repo => (
           <ListRepos key={repo.id}>
-            <img src={repo.owner.avatar_url} alt={repo.owner.login} />
+            <Link href="#">
+              <a>
+                <img src={repo.owner.avatar_url} alt={repo.owner.login} />
+              </a>
+            </Link>
 
-            <div>
-              <a href="#">{repo.full_name}</a>
+            <Link href="#">
+              <a className="content-link">
+                <strong>{repo.full_name}</strong>
 
-              <p>{repo.description}</p>
-            </div>
+                <p>{repo.description}</p>
+              </a>
+            </Link>
           </ListRepos>
         ))}
       </Main>
