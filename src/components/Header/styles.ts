@@ -34,6 +34,7 @@ export const Container = styled.header`
 `
 
 export const Wrapper = styled.div`
+  width: 100%;
   padding: 30px;
   z-index: 999;
 
@@ -43,7 +44,9 @@ export const Wrapper = styled.div`
   }
 
   p {
-    margin-top: 1rem;
+    max-width: 500px;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
     color: ${props => props.theme.colors.light};
   }
 `

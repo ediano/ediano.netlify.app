@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Main = styled.main`
   width: 80%;
   max-width: 800px;
-  margin: 25px auto;
+  margin: 50px auto;
 `
 
 export const ListRepos = styled.section`

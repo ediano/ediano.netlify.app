@@ -4,15 +4,18 @@ import ImgDevActivity from '../../assets/dev_activity.svg'
 
 import { Container, Wrapper } from './styles'
 
-console.log(process.env.GITHUB_LOGIN)
+interface Props {
+  owner: string
+  description: string
+}
 
-const Header: React.FC = () => (
+const Header: React.FC<Props> = ({ owner, description }) => (
   <Container>
     <div>
       <Wrapper>
-        <h1>Ediano Silva Santos</h1>
+        <h1>{owner}</h1>
 
-        <p>Cillum excepteur anim magna do. Cillum excepteur anim magna do.</p>
+        <p>{description}</p>
       </Wrapper>
 
       <ImgDevActivity />
