@@ -10,6 +10,7 @@ export const Container = styled.footer`
   strong {
     display: block;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 
     a {
       color: ${props => props.theme.colors.light};
