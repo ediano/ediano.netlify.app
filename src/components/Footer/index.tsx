@@ -1,20 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { api } from '../../services/api'
 
 import { Container } from './styles'
 
-interface Props {
-  owner: string
-  url: string
+interface Owner {
+  html_url: string
+  name: string
 }
 
-const Footer: React.FC<Props> = ({ owner, url }) => {
+const Footer: React.FC = () => {
+  const [owner, setOwner] = useState<Owner>()
+
+  useEffect(() => {
+    api.get<Owner>('users/ediano').then(response => {
+      setOwner(response.data)
+    })
+  }, [])
+
   const data = new Date()
 
   return (
     <Container>
       <strong>
-        <a href={url} target="_black">
-          {owner}
+        <a href={owner?.html_url} target="_black">
+          {owner?.name}
         </a>
       </strong>
       <span>Todos os direitos reservados</span>

@@ -13,7 +13,7 @@ export default createGlobalStyle`
 
 html,
 body,
-__next {
+#__next {
   display: flex;
   flex-direction: column;
   min-height: 100vh;

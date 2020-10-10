@@ -1,26 +1,36 @@
 import React from 'react'
+import Link from 'next/link'
+import { FiArrowLeft } from 'react-icons/fi'
 
 import ImgDevActivity from '../../assets/dev_activity.svg'
 
 import { Container, Wrapper } from './styles'
 
 interface Props {
-  owner: string
+  title: string
   description: string
 }
 
-const Header: React.FC<Props> = ({ owner, description }) => (
-  <Container>
-    <div>
-      <Wrapper>
-        <h1>{owner}</h1>
+const Header: React.FC<Props> = ({ title, description }) => {
+  return (
+    <Container>
+      <div>
+        <Wrapper>
+          <h1>{title}</h1>
 
-        <p>{description}</p>
-      </Wrapper>
+          <p>{description}</p>
+        </Wrapper>
 
-      <ImgDevActivity />
-    </div>
-  </Container>
-)
+        <Link href="/">
+          <a>
+            <FiArrowLeft size={32} />
+          </a>
+        </Link>
+
+        <ImgDevActivity />
+      </div>
+    </Container>
+  )
+}
 
 export default Header

@@ -4,64 +4,72 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { api } from '../services/api'
 
-import Layout, { Owner } from '../components/Layout'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import { Main, ListRepos } from '../styles/pages/Home'
 
-interface License {
-  name: string
-  url: string
+interface Owner {
+  avatar_url: string
+  html_url: string
+  name?: string
+  bio?: string
 }
 
 interface ReposProps {
   id: string
   name: string
   description: string
-  license: License
   owner: Owner
 }
 
 interface Props {
   repos: ReposProps[]
+  owner: Owner
 }
 
-const Home: React.FC<Props> = ({ repos }) => {
+const Home: React.FC<Props> = ({ repos, owner }) => {
   return (
     <>
       <Head>
         <title>Homepage</title>
       </Head>
 
-      <Layout>
-        <Main>
-          {repos.map(repo => (
-            <ListRepos key={repo.id}>
-              <Link href={repo.owner.html_url}>
-                <a>
-                  <img src={repo.owner.avatar_url} alt={repo.owner.name} />
-                </a>
-              </Link>
+      <Header title={owner.name} description={owner.bio} />
 
-              <Link href={repo.name}>
-                <a className="content-link">
-                  <strong>{repo.name}</strong>
+      <Main>
+        {repos.map(repo => (
+          <ListRepos key={repo.id}>
+            <Link href={repo.owner.html_url}>
+              <a>
+                <img src={repo.owner.avatar_url} alt={repo.owner.name} />
+              </a>
+            </Link>
 
-                  <p>{repo.description}</p>
-                </a>
-              </Link>
-            </ListRepos>
-          ))}
-        </Main>
-      </Layout>
+            <Link href={repo.name}>
+              <a className="content-link">
+                <strong>{repo.name}</strong>
+
+                <p>{repo.description}</p>
+              </a>
+            </Link>
+          </ListRepos>
+        ))}
+      </Main>
+
+      <Footer />
     </>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const repos = await api.get<ReposProps[]>('users/ediano/repos')
+  const [repos, owner] = await Promise.all([
+    api.get<ReposProps[]>('users/ediano/repos'),
+    api.get<Owner>('users/ediano')
+  ])
 
   return {
-    props: { repos: repos.data }
+    props: { repos: repos.data, owner: owner.data }
   }
 }
 

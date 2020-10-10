@@ -2,7 +2,8 @@ import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { api } from '../services/api'
 
-import Layout from '../components/Layout'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import { Container } from '../styles/pages/Repo'
 
@@ -13,9 +14,8 @@ interface RepoProps {
   clone_url: string
   homepage: string
   language: string
-  forks: number
   open_issues: number
-  watchers: number
+  stargazers_count: number
   forks_count: number
   license: {
     name: string
@@ -29,9 +29,67 @@ interface Props {
 
 const Repo: React.FC<Props> = ({ repo }) => {
   return (
-    <Layout>
-      <Container>{repo.name}</Container>
-    </Layout>
+    <>
+      <Header title={repo.name} description={repo.description} />
+
+      <Container>
+        <div>
+          <span>
+            Forks
+            <strong>{repo.forks_count}</strong>
+          </span>
+
+          <span>
+            Issues
+            <strong>{repo.open_issues}</strong>
+          </span>
+
+          <span>
+            Star
+            <strong>{repo.stargazers_count}</strong>
+          </span>
+        </div>
+
+        <div>
+          <span>
+            License
+            <strong>{repo.license?.name || 'Not'}</strong>
+            {repo.license && (
+              <a href={repo.license.url} target="_black">
+                Acessar
+              </a>
+            )}
+          </span>
+
+          <span>
+            Language
+            <strong>{repo.language}</strong>
+          </span>
+        </div>
+
+        <div>
+          <span>
+            GitHub
+            <strong>
+              <a href={repo.html_url} target="_black">
+                Acessar
+              </a>
+            </strong>
+          </span>
+
+          <span>
+            Site
+            <strong>
+              <a href={repo.homepage} target="_black">
+                Acessar
+              </a>
+            </strong>
+          </span>
+        </div>
+      </Container>
+
+      <Footer />
+    </>
   )
 }
 

@@ -19,7 +19,7 @@ export const Container = styled.header`
     height: 100%;
     margin: 0 auto;
 
-    svg {
+    > svg {
       position: absolute;
       width: auto;
       height: 100%;
@@ -30,13 +30,25 @@ export const Container = styled.header`
         right: -25%;
       }
     }
+
+    a {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      z-index: 999;
+      color: ${props => props.theme.colors.white};
+
+      &:hover {
+        color: ${props => props.theme.colors.light};
+      }
+    }
   }
 `
 
 export const Wrapper = styled.div`
   width: 100%;
   padding: 30px;
-  z-index: 999;
+  z-index: 998;
 
   h1 {
     color: ${props => props.theme.colors.white};
