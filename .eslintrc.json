@@ -28,6 +28,7 @@
   ],
   "rules": {
     "prettier/prettier": "error",
+    "camelcase": "off",
     "space-before-function-paren": "off",
     "no-use-before-define": "off",
     "react/prop-types": "off"

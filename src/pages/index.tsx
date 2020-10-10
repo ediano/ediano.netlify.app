@@ -1,35 +1,66 @@
 import React from 'react'
-import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import { GetStaticProps } from 'next'
 import { api } from '../services/api'
 
-import { Container } from '../styles/pages/Home'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
-interface RepoProps {
-  id: string
+import { Main, ListRepos } from '../styles/pages/Home'
+
+interface License {
   name: string
+  url: string
 }
 
-interface HomeProps {
-  repos: RepoProps[]
+interface Owner {
+  login: string
+  avatar_url: string
+  html_url: string
 }
 
-const Home: React.FC<HomeProps> = ({ repos }) => {
+interface ReposProps {
+  id: string
+  full_name: string
+  description: string
+  license: License
+  owner: Owner
+}
+
+interface Props {
+  repos: ReposProps[]
+}
+
+const Home: React.FC<Props> = ({ repos }) => {
   return (
-    <Container>
+    <>
       <Head>
         <title>Homepage</title>
       </Head>
 
-      {repos.map(repo => (
-        <span key={repo.id}>{repo.name}</span>
-      ))}
-    </Container>
+      <Header />
+
+      <Main>
+        {repos.map(repo => (
+          <ListRepos key={repo.id}>
+            <img src={repo.owner.avatar_url} alt={repo.owner.login} />
+
+            <div>
+              <a href="#">{repo.full_name}</a>
+
+              <p>{repo.description}</p>
+            </div>
+          </ListRepos>
+        ))}
+      </Main>
+
+      <Footer />
+    </>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await api.get('users/ediano/repos')
+  const response = await api.get<ReposProps[]>('users/ediano/repos')
 
   return {
     props: { repos: response.data }

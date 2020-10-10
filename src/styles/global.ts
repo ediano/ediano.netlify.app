@@ -11,9 +11,17 @@ export default createGlobalStyle`
   -webkit-tap-highlight-color: transparent;
 }
 
+html,
+body,
+__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
-  background: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.text};
+  background: #efefef;
+  color: #333;
 }
 
 body {
