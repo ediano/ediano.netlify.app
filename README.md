@@ -14,4 +14,4 @@ Sou apaixonado por tecnologia, curto muito series e filmes de ficção, sou fasc
 
 :blush: Posso te ajudar com CSS Grid Layout, Flexbox e JavaScript.
 
-:blue_book: Além da faculdade também estou estudando na horas vagas tudo que posso sobre desenvolvimento Back-end e Front-end. NodeJS, ExpressJS, ReactJS e TypeScript.
+:blue_book: Além da faculdade também estou estudando na horas vagas tudo que posso sobre desenvolvimento Back-end e Front-end. NodeJS, ExpressJS, NextJS/ReactJS e TypeScript.
