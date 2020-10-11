@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
 
           <link
             rel="shortcut icon"
-            href="https://reactjs.org/favicon.ico"
+            href="https://avatars3.githubusercontent.com/u/61340191"
             type="image/x-icon"
           />
         </Head>
