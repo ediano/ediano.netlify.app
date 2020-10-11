@@ -69,7 +69,8 @@ export const getStaticProps: GetStaticProps = async () => {
   ])
 
   return {
-    props: { repos: repos.data, owner: owner.data }
+    props: { repos: repos.data, owner: owner.data },
+    revalidate: 60
   }
 }
 

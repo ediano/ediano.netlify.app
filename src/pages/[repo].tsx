@@ -1,10 +1,12 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { api } from '../services/api'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Spinner from '../components/Spinner'
 
 import { Container } from '../styles/pages/Repo'
 
@@ -29,6 +31,12 @@ interface Props {
 }
 
 const Repo: React.FC<Props> = ({ repo }) => {
+  const { isFallback } = useRouter()
+
+  if (isFallback) {
+    return <Spinner />
+  }
+
   return (
     <>
       <Head>
@@ -107,7 +115,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
