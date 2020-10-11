@@ -11,7 +11,7 @@ export const ListRepos = styled.section`
   align-items: center;
 
   width: 100%;
-  margin: 25px;
+  margin: 25px 0;
   padding: 25px;
 
   background: ${props => props.theme.colors.light};
