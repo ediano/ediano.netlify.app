@@ -117,7 +117,8 @@ export const getStaticProps: GetStaticProps = async context => {
   const response = await api.get(`/repos/ediano/${repo}`)
 
   return {
-    props: { repo: response.data }
+    props: { repo: response.data },
+    revalidate: 60
   }
 }
 
