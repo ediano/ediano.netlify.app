@@ -12,7 +12,7 @@ import { Main, ListRepos } from '../styles/pages/Home'
 interface Owner {
   avatar_url: string
   html_url: string
-  name?: string
+  name: string
   bio?: string
 }
 
@@ -32,7 +32,7 @@ const Home: React.FC<Props> = ({ repos, owner }) => {
   return (
     <>
       <Head>
-        <title>Homepage</title>
+        <title>{owner.name}</title>
       </Head>
 
       <Header title={owner.name} description={owner.bio} />

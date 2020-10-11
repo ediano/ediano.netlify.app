@@ -1,5 +1,6 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
 import { api } from '../services/api'
 
 import Header from '../components/Header'
@@ -30,6 +31,10 @@ interface Props {
 const Repo: React.FC<Props> = ({ repo }) => {
   return (
     <>
+      <Head>
+        <title>{repo.name}</title>
+      </Head>
+
       <Header title={repo.name} description={repo.description} />
 
       <Container>
@@ -53,7 +58,7 @@ const Repo: React.FC<Props> = ({ repo }) => {
         <div>
           <span>
             License
-            <strong>{repo.license?.name || 'Not'}</strong>
+            <strong>{repo.license ? repo.license.name : 'Not'}</strong>
             {repo.license && (
               <a href={repo.license.url} target="_black">
                 Acessar
