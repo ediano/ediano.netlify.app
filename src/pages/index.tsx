@@ -40,11 +40,9 @@ const Home: React.FC<Props> = ({ repos, owner }) => {
       <Main>
         {repos.map(repo => (
           <ListRepos key={repo.id}>
-            <Link href={repo.owner.html_url}>
-              <a>
-                <img src={repo.owner.avatar_url} alt={repo.owner.name} />
-              </a>
-            </Link>
+            <a href={repo.owner.html_url}>
+              <img src={repo.owner.avatar_url} alt={repo.owner.name} />
+            </a>
 
             <Link href={repo.name}>
               <a className="content-link">
