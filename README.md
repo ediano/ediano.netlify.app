@@ -2,7 +2,7 @@
 
 [![Twitter Badge](https://img.shields.io/badge/-@edianobr-27a9e1?style=flat-square&labelColor=27a9e1&logo=twitter&logoColor=white&link=https://twitter.com/edianobr)](https://twitter.com/edianobr)
 [![Linkedin Badge](https://img.shields.io/badge/-Ediano%20Silva%20Santos-27a9e1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ediano)](https://www.linkedin.com/in/ediano)
-[![Gmail Badge](https://img.shields.io/badge/-edianodev@gmail.com-27a9e1?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edianodev@gmail.com)](mailto:edianodev@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-silva.ediano.santo@gmail.com-27a9e1?style=flat-square&logo=Gmail&logoColor=white&link=mailto:silva.ediano.santo@gmail.com)](mailto:silva.ediano.santo@gmail.com)
 
 Atualmente faço bacharelado em sistemas de informação (5º período).
 
