@@ -126,7 +126,7 @@ export const getStaticProps: GetStaticProps = async context => {
 
   return {
     props: { repo: response.data },
-    revalidate: 60
+    revalidate: 3600
   }
 }
 
