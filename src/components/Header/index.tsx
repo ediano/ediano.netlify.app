@@ -9,9 +9,10 @@ import { Container, Wrapper } from './styles'
 interface Props {
   title: string
   description: string
+  isRepo?: boolean
 }
 
-const Header: React.FC<Props> = ({ title, description }) => {
+const Header: React.FC<Props> = ({ title, description, isRepo }) => {
   return (
     <Container>
       <div>
@@ -21,11 +22,13 @@ const Header: React.FC<Props> = ({ title, description }) => {
           <p>{description}</p>
         </Wrapper>
 
-        <Link href="/">
-          <a>
-            <FiArrowLeft size={32} />
-          </a>
-        </Link>
+        {isRepo && (
+          <Link href="/">
+            <a>
+              <FiArrowLeft size={32} />
+            </a>
+          </Link>
+        )}
 
         <ImgDevActivity />
       </div>

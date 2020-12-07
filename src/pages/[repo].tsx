@@ -43,7 +43,7 @@ const Repo: React.FC<Props> = ({ repo }) => {
         <title>{repo.name}</title>
       </Head>
 
-      <Header title={repo.name} description={repo.description} />
+      <Header title={repo.name} description={repo.description} isRepo />
 
       <Container>
         <div>
@@ -68,7 +68,11 @@ const Repo: React.FC<Props> = ({ repo }) => {
             License
             <strong>{repo.license ? repo.license.name : 'Not'}</strong>
             {repo.license && (
-              <a href={repo.license.url} target="_black">
+              <a
+                href={repo.license.url}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
                 Acessar
               </a>
             )}
@@ -84,7 +88,11 @@ const Repo: React.FC<Props> = ({ repo }) => {
           <span>
             GitHub
             <strong>
-              <a href={repo.html_url} target="_black">
+              <a
+                href={repo.html_url}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
                 Acessar
               </a>
             </strong>
@@ -93,7 +101,11 @@ const Repo: React.FC<Props> = ({ repo }) => {
           <span>
             Site
             <strong>
-              <a href={repo.homepage} target="_black">
+              <a
+                href={repo.homepage}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
                 Acessar
               </a>
             </strong>
