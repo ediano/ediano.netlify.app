@@ -43,7 +43,7 @@ const Repo: React.FC<Props> = ({ repo }) => {
         <title>{repo.name}</title>
       </Head>
 
-      <Header title={repo.name} description={repo.description} isRepo />
+      <Header title={repo.name} description={repo.description} isGoBack />
 
       <Container>
         <div>
