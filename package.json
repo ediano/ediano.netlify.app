@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "next": "^10.0.3",
     "next-images": "^1.6.0",
     "polished": "^4.0.2",
