@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
 
           <link
             rel="shortcut icon"
-            href="https://avatars3.githubusercontent.com/u/61340191"
+            href="https://avatars.githubusercontent.com/u/81658458?v=4"
             type="image/x-icon"
           />
         </Head>
